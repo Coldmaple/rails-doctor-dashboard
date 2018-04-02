@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'appointments#index'
   get 'detail' => 'appointments#detail'
+  get 'account' => 'pages#account'
   resource :appointments
 end

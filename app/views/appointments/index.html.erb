@@ -1,5 +1,8 @@
 <h1>Welcome to Dash Board!</h1>
 
+<h2><%= link_to  "My account", account_path %></h2>
+<h2>Appointments</h2>
+
 <% @appointments.each do |appointment| %>
     <div class='appointment-box'>
         <h3>Date: <%= appointment.date %></h3>
