@@ -1,0 +1,21 @@
+<h1>Welcome to Dash Board!</h1>
+
+<% @appointments.each do |appointment| %>
+    <div class='appointment-box'>
+        <h3>Date: <%= appointment.date %></h3>
+        <h3>Time: <%= appointment.time %></h3>
+        <div class="index-doctor">
+            <div class='doctor-name'>Doctor: <%= appointment.doctorName %></div>
+            <div class='doctor-bio'>
+                <div>Name: <%= appointment.doctorName %></div>
+                <div>Specialty: Medical research</div>
+                <div>Education: Ph.D</div>
+                <img src="http://placekitten.com/200/200">
+            </div>
+        </div>
+        <h3>Others: <%= appointment.others %></h3>
+        <h3>
+        <%= link_to  "Click to see details: ", detail_path({:id => appointment.appointmentId}) %>
+        </h3>
+    </div>
+<% end %>
